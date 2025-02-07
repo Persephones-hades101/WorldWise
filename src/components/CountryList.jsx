@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import styles from './CountryList.module.css'
 
-import CityItem from './CityItem'
 import Spinner from "./Spinner"
 import Message from "./Message"
 import CountryItem from './CountryItem'
+import { useCities } from '../contexts/CitiesContext'
 
 
 CountryList.propTypes = {
@@ -13,7 +13,8 @@ CountryList.propTypes = {
 
 }
 
-export default function CountryList({ cities, isLoading }) {
+export default function CountryList() {
+  const { cities, isLoading } = useCities()
 
   if (isLoading) return <Spinner />
 

@@ -4,6 +4,7 @@
   list-style: none;
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-width: none;
 
   display: flex;
   flex-direction: column;
@@ -11,5 +12,6 @@
 }
 
 .cityList::-webkit-scrollbar {
-  width: 0;
+  /* width: 0; */
+  display: none;
 }
