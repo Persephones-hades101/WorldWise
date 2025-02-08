@@ -40,7 +40,7 @@ function reducer(state, action) {
         ...state, isLoading: false, error: action.payload
       }
     default:
-      break;
+      throw new Error("Unknown action!")
   }
 }
 
